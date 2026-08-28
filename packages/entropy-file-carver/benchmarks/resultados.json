@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-08-27T19:48:50Z",
+  "platform": {
+    "system": "Linux",
+    "release": "7.1.9-200.fc44.x86_64",
+    "machine": "x86_64",
+    "python_version": "3.14.7"
+  },
+  "test_dataset": {
+    "size_bytes": 20971520,
+    "size_mb": 20
+  },
+  "benchmarks": {
+    "raw_shannon_entropy": {
+      "duration_seconds": 1.1048,
+      "throughput_mb_s": 18.1,
+      "blocks_processed": 5120
+    },
+    "sliding_window_entropy": {
+      "duration_seconds": 0.2276,
+      "throughput_mb_s": 8.79,
+      "windows_evaluated": 4095
+    },
+    "entropy_mapping": {
+      "duration_seconds": 1.0522,
+      "throughput_mb_s": 19.01,
+      "total_blocks": 5120
+    },
+    "mmap_file_carving": {
+      "duration_seconds": 1.6747,
+      "throughput_mb_s": 11.94,
+      "files_carved": 7,
+      "files_per_second": 4.18
+    },
+    "format_validation": {
+      "duration_seconds": 0.0148,
+      "validations_per_second": 67702.33
+    }
+  }
+}

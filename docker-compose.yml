@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  forensics-suite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cibi-dev/digital-forensics-suite:latest
+    container_name: digital-forensics-suite
+    restart: "no"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./data:/app/data:ro
+      - ./output:/app/output:rw
+    command: ["demo"]

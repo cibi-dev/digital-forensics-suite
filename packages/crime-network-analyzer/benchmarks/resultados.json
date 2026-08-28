@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-08-28T00:11:26.175571+00:00",
+  "graph_metrics": {
+    "node_count": 10000,
+    "edge_count": 97997,
+    "communities_detected": 50,
+    "modularity_score": 0.7771,
+    "fraud_rings_found": 50,
+    "mules_found": 2647
+  },
+  "timings": {
+    "ingestion_and_build_sec": 0.211,
+    "centrality_pagerank_sec": 0.1963,
+    "louvain_communities_sec": 1.8989,
+    "fraud_rings_detection_sec": 0.1499,
+    "total_execution_sec": 2.4573
+  },
+  "performance_gate": {
+    "sla_threshold_sec": 3.0,
+    "actual_time_sec": 2.4573,
+    "peak_rss_mb": 798.43,
+    "status": "PASS"
+  }
+}

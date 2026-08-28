@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-08-27T19:39:49Z",
+  "engine": "IsolationForest (100 trees) + Multivariable Z-Score (Mahalanobis)",
+  "hardware_context": "Local CPU Execution",
+  "dataset_summary": {
+    "total_raw_events": 5000,
+    "normal_events": 4000,
+    "ssh_brute_force_events": 500,
+    "password_spray_events": 300,
+    "exfiltration_events": 200,
+    "sliding_windows_evaluated": 6793,
+    "anomaly_windows_count": 53,
+    "normal_windows_count": 6740
+  },
+  "performance_latency": {
+    "batch_size_events": 1000,
+    "n_trials": 30,
+    "latency_ms_mean": 5.856,
+    "latency_ms_median": 4.589,
+    "latency_ms_p95": 11.835,
+    "latency_ms_p99": 12.348,
+    "latency_ms_min": 3.279,
+    "latency_ms_max": 12.552,
+    "target_threshold_ms": 10.0,
+    "gate_passed": true
+  },
+  "detection_accuracy": {
+    "precision": 0.963,
+    "recall": 0.9811,
+    "f1_score": 0.972,
+    "accuracy": 0.9996,
+    "target_f1_threshold": 0.95,
+    "gate_passed": true,
+    "confusion_matrix": {
+      "tp": 52,
+      "fp": 2,
+      "fn": 1,
+      "tn": 6738
+    }
+  },
+  "gates": {
+    "f1_gate_passed": true,
+    "latency_gate_passed": true,
+    "overall_success": true
+  }
+}

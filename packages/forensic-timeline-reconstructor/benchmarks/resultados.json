@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-08-27T19:42:15.694552+00:00",
+  "total_events_processed": 100000,
+  "raw_dataset_size_mb": 12.35,
+  "streaming_correlation_time_seconds": 44.164,
+  "throughput_mb_per_second": 0.28,
+  "throughput_events_per_second": 2264.27,
+  "peak_memory_consumption_mb": 0.73,
+  "memory_guardrail_limit_mb": 50.0,
+  "memory_guardrail_passed": true,
+  "tamper_detection_time_seconds": 6.792,
+  "detected_anomalies_count": 25000,
+  "system_max_rss_mb": 525.76
+}

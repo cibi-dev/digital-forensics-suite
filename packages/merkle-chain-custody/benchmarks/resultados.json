@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-08-27T19:24:13Z",
+  "benchmark_duration_seconds": 0.254,
+  "system": {
+    "platform": "Linux-7.1.9-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "python_version": "3.14.7",
+    "processor": "",
+    "machine": "x86_64"
+  },
+  "hashing_throughput": {
+    "sha256": {
+      "data_size_mb": 10,
+      "elapsed_seconds": 0.0109,
+      "throughput_mb_s": 918.74,
+      "sample_digest_prefix": "5e27df1b038d750e"
+    },
+    "blake3": {
+      "data_size_mb": 10,
+      "elapsed_seconds": 0.0045,
+      "throughput_mb_s": 2205.81,
+      "sample_digest_prefix": "9d4eed1570ba9107"
+    }
+  },
+  "merkle_tree": {
+    "leaves_100": {
+      "leaf_count": 100,
+      "tree_height": 8,
+      "build_time_ms": 0.367,
+      "proof_generation_us": 8.97,
+      "proof_verification_us": 19.36,
+      "root_prefix": "5f0ddecd23b6ea1e"
+    },
+    "leaves_1000": {
+      "leaf_count": 1000,
+      "tree_height": 11,
+      "build_time_ms": 2.845,
+      "proof_generation_us": 16.31,
+      "proof_verification_us": 24.58,
+      "root_prefix": "aeb438bfa7f7db75"
+    },
+    "leaves_5000": {
+      "leaf_count": 5000,
+      "tree_height": 14,
+      "build_time_ms": 15.093,
+      "proof_generation_us": 13.55,
+      "proof_verification_us": 30.95,
+      "root_prefix": "9fdfad50af1a2d1e"
+    },
+    "leaves_10000": {
+      "leaf_count": 10000,
+      "tree_height": 15,
+      "build_time_ms": 40.711,
+      "proof_generation_us": 16.78,
+      "proof_verification_us": 45.75,
+      "root_prefix": "ebbbd33055aa393a"
+    }
+  },
+  "certificate_operations": {
+    "item_count": 500,
+    "certificate_id": "CERT-E41C647C9464",
+    "generation_time_ms": 0.716,
+    "verification_time_ms": 0.562
+  },
+  "sqlite_ingestion": {
+    "total_items": 1000,
+    "write_elapsed_seconds": 0.0164,
+    "write_throughput_items_per_sec": 60999.69,
+    "read_all_latency_ms": 36.437
+  }
+}
