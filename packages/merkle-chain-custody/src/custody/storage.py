@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import sys
 import uuid
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
@@ -116,10 +117,12 @@ class CustodyStorage:
             target.parent.mkdir(parents=True, exist_ok=True)
             self.db_path = str(target)
 
+        conn_kwargs: Dict[str, Any] = {"check_same_thread": False}
+        if sys.version_info >= (3, 12):
+            conn_kwargs["autocommit"] = True
         self._conn: sqlite3.Connection = sqlite3.connect(
             self.db_path,
-            check_same_thread=False,
-            autocommit=True,
+            **conn_kwargs,
         )
         self._conn.row_factory = sqlite3.Row
         self._init_db()
