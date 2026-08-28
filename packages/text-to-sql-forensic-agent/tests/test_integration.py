@@ -15,6 +15,8 @@ from typing import Any
 
 import pytest
 
+pytest.importorskip("guardrails", reason="guardrails-engine opcional: vive en ml-from-scratch-engine")
+
 from guardrails.llm import LLMClient, LLMResponse, Message
 from guardrails.types import TokenUsage
 

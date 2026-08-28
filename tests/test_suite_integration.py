@@ -60,9 +60,14 @@ def test_cli_subcommands_help() -> None:
     """Verifies all 6 subcommands accept --help and exit with 0."""
     subcommands = ["network", "timeline", "carver", "custody", "sql", "threats"]
     for sub in subcommands:
-        with pytest.raises(SystemExit) as exc_info:
-            cli.main([sub, "--help"])
-        assert exc_info.value.code == 0
+        # La mayoría de subcomandos delega en CLIs de paquetes que lanzan
+        # SystemExit(0) con --help; otros (p. ej. custody) capturan el exit y
+        # devuelven el código. Ambos contratos son válidos.
+        try:
+            code: int | None = cli.main([sub, "--help"])
+        except SystemExit as exc_info:
+            code = exc_info.code
+        assert code == 0
 
 
 def test_cli_unknown_subcommand(capsys: pytest.CaptureFixture[str]) -> None:

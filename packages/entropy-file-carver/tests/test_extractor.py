@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 
 from carver.extractor import Extractor, carve_files_from_mmap
-from tests.test_signatures import (
+from .test_signatures import (
     create_minimal_jpeg,
     create_minimal_pdf,
     create_minimal_png,
